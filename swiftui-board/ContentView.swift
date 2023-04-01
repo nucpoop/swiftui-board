@@ -8,14 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var network = RequestAPI.shared
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView{
+            NavigationView{
+                List{
+                    ForEach(network.boards, id: \.self){result in
+                        Text(result.title)
+                    }
+                }.navigationTitle("게시판")
+            }.onAppear{
+                network.fetchData()
+            }.tabItem{
+                Image(systemName: "list.bullet")
+                Text("게시판")
+            }.badge(network.boards.count)
+            
+            VStack{
+                Text("로그인")
+            }.tabItem{
+                Image(systemName: "person")
+                Text("로그인")
+            }
+        
         }
-        .padding()
     }
 }
 
@@ -24,3 +40,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+    
