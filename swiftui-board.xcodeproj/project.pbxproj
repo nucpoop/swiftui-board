@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FE76CB529D8727E00D91694 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE76CB429D8727E00D91694 /* LoginView.swift */; };
+		3FE76CBB29D8741600D91694 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE76CBA29D8741600D91694 /* BoardView.swift */; };
 		3FF2FF9829D8328B004AFA3A /* swiftui_boardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2FF9729D8328B004AFA3A /* swiftui_boardApp.swift */; };
 		3FF2FF9A29D8328B004AFA3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF2FF9929D8328B004AFA3A /* ContentView.swift */; };
 		3FF2FF9C29D8328C004AFA3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FF2FF9B29D8328C004AFA3A /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3FE76CB429D8727E00D91694 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3FE76CBA29D8741600D91694 /* BoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
 		3FF2FF9429D8328B004AFA3A /* swiftui-board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swiftui-board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FF2FF9729D8328B004AFA3A /* swiftui_boardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_boardApp.swift; sourceTree = "<group>"; };
 		3FF2FF9929D8328B004AFA3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +40,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FE76CB629D8736700D91694 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3FF2FF9929D8328B004AFA3A /* ContentView.swift */,
+				3FE76CB429D8727E00D91694 /* LoginView.swift */,
+				3FE76CBA29D8741600D91694 /* BoardView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3FE76CB729D8739800D91694 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3FF2FFA529D833CB004AFA3A /* RequestAPI.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3FE76CB829D873AB00D91694 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3FF2FFA729D835F4004AFA3A /* Board.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3FF2FF8B29D8328B004AFA3A = {
 			isa = PBXGroup;
 			children = (
@@ -55,12 +85,12 @@
 		3FF2FF9629D8328B004AFA3A /* swiftui-board */ = {
 			isa = PBXGroup;
 			children = (
+				3FE76CB829D873AB00D91694 /* Model */,
+				3FE76CB729D8739800D91694 /* Util */,
+				3FE76CB629D8736700D91694 /* View */,
 				3FF2FF9729D8328B004AFA3A /* swiftui_boardApp.swift */,
-				3FF2FF9929D8328B004AFA3A /* ContentView.swift */,
 				3FF2FF9B29D8328C004AFA3A /* Assets.xcassets */,
 				3FF2FF9D29D8328C004AFA3A /* Preview Content */,
-				3FF2FFA529D833CB004AFA3A /* RequestAPI.swift */,
-				3FF2FFA729D835F4004AFA3A /* Board.swift */,
 			);
 			path = "swiftui-board";
 			sourceTree = "<group>";
@@ -146,6 +176,8 @@
 				3FF2FF9A29D8328B004AFA3A /* ContentView.swift in Sources */,
 				3FF2FFA629D833CB004AFA3A /* RequestAPI.swift in Sources */,
 				3FF2FFA829D835F4004AFA3A /* Board.swift in Sources */,
+				3FE76CBB29D8741600D91694 /* BoardView.swift in Sources */,
+				3FE76CB529D8727E00D91694 /* LoginView.swift in Sources */,
 				3FF2FF9829D8328B004AFA3A /* swiftui_boardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,26 +11,16 @@ struct ContentView: View {
     @StateObject private var network = RequestAPI.shared
     var body: some View {
         TabView{
-            NavigationView{
-                List{
-                    ForEach(network.boards, id: \.self){result in
-                        Text(result.title)
-                    }
-                }.navigationTitle("게시판")
-            }.onAppear{
-                network.fetchData()
-            }.tabItem{
+            BoardView().tabItem{
                 Image(systemName: "list.bullet")
                 Text("게시판")
             }.badge(network.boards.count)
             
-            VStack{
-                Text("로그인")
-            }.tabItem{
+            LoginView().tabItem{
                 Image(systemName: "person")
                 Text("로그인")
             }
-        
+            
         }
     }
 }
@@ -40,4 +30,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-    
