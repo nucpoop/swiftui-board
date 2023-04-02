@@ -11,7 +11,7 @@ struct ContentView: View {
     @StateObject private var network = RequestAPI.shared
     var body: some View {
         TabView{
-            BoardView().tabItem{
+            BoardListView().tabItem{
                 Image(systemName: "list.bullet")
                 Text("게시판")
             }.badge(network.boards.count)

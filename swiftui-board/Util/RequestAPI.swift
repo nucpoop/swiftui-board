@@ -22,6 +22,7 @@ class RequestAPI: ObservableObject{
         let task = session.dataTask(with: url){ data, response, error in
             if let error = error{
                 print("error: " + error.localizedDescription)
+                self.setDummy()
                 return
             }
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else{
@@ -41,5 +42,13 @@ class RequestAPI: ObservableObject{
             }
         }
         task.resume()
+    }
+    
+    func setDummy(){
+        self.boards.append(Board(title: "hello", content: "contents"))
+        self.boards.append(Board(title: "api is not allow", content: "temp"))
+        self.boards.append(Board(title: "api is not allow", content: "temp"))
+        self.boards.append(Board(title: "api is not allow", content: "temp"))
+        self.boards.append(Board(title: "api is not allow", content: "temp"))
     }
 }

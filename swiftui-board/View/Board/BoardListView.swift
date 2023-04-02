@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct BoardView: View{
+struct BoardListView: View{
     @StateObject private var network = RequestAPI.shared
     var body: some View{
         NavigationView{
             List{
                 ForEach(network.boards, id: \.self){result in
-                    Text(result.title)
+                    BoardRow(board: result)
                 }
             }.navigationTitle("게시판")
         }.onAppear{
@@ -22,8 +22,8 @@ struct BoardView: View{
     }
 }
 
-struct BoardView_Previews: PreviewProvider{
+struct BoardListView_Previews: PreviewProvider{
     static var previews: some View{
-        BoardView()
+        BoardListView()
     }
 }
